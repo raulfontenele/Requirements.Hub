@@ -1,0 +1,12 @@
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\Requirements.Hub.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\Requirements.Hub.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\Requirements.Hub.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\Requirements.Hub.Infrastructure.AssemblyInfo.cs
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\Requirements.Hub.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\bin\Debug\net7.0\Requirements.Hub.Infrastructure.deps.json
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\bin\Debug\net7.0\Requirements.Hub.Infrastructure.dll
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\bin\Debug\net7.0\Requirements.Hub.Infrastructure.pdb
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\Requirements.Hub.Infrastructure.dll
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\refint\Requirements.Hub.Infrastructure.dll
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\Requirements.Hub.Infrastructure.pdb
+C:\Users\Raul\OneDrive\Documentos\1. MAIN\1. DESENVOLVIMENTO\1. C#\Requirements Hub\Requirements.Hub\Requirements.Hub.Infrastructure\obj\Debug\net7.0\ref\Requirements.Hub.Infrastructure.dll

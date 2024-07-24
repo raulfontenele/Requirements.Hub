@@ -9,7 +9,7 @@ namespace Requirements.Hub.Api.Controllers
     [ApiController]
     public class RequirementsController : Controller
     {
-        [HttpGet]
+        [HttpGet("ProjectName")]
         public IActionResult GetRequirementByProject(string projectName)
         {
             try
@@ -24,6 +24,23 @@ namespace Requirements.Hub.Api.Controllers
                 return BadRequest("Erro Inesperado");
             }
             
+
+        }
+        [HttpGet()]
+        public IActionResult GetAllRequirement(string projectName)
+        {
+            try
+            {
+                GetRequirementUseCase requirementUseCase = new GetRequirementUseCase();
+                var reqs = requirementUseCase.GetAllRequirement();
+
+                return Ok(reqs);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Erro Inesperado");
+            }
+
 
         }
         [HttpPut]

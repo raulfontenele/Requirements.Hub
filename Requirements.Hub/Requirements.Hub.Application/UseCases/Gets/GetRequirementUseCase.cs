@@ -25,5 +25,22 @@ namespace Requirements.Hub.Application.UseCases.Gets
                 return requirements.Select(x => new RequirementResponseJSON() { Id = x.Id, Description = x.Description, Funcionality = x.Funcionality }).ToList();
             }
         }
+        public IList<RequirementLongResponseJSON> GetAllRequirement()
+        {
+            using (var context = new RequirementContext())
+            {
+
+                var requirements = context.GetAllRequirements();
+
+                return requirements.Select(x => new RequirementLongResponseJSON() 
+                { 
+                    Id = x.Id, 
+                    Description = x.Description, 
+                    Funcionality = x.Funcionality,
+                    ProjectName = x.Project.Name,
+                    ProjectId = x.Project.Id
+                }).ToList();
+            }
+        }
     }
 }

@@ -16,5 +16,11 @@ namespace Requirements.Hub.Infrastructure
 
             return reqs;
         }
+        public IList<Requirement> GetAllRequirements()
+        {
+            var reqs = Requirement.ToList();
+
+            return reqs;
+        }
     }
 }

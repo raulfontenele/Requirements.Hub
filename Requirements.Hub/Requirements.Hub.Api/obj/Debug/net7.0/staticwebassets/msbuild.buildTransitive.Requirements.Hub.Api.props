@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Requirements.Hub.Api.props" />
-</Project>

@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Requirements.Hub.Infrastructure.Entities
+namespace Requirements.Hub.Communication.Request.Requirement
 {
-    public class Requirement
+    public class RequirementRequestJSON
     {
-        public Guid Id { get; set; } = new Guid();
         public string Description { get; set; } = string.Empty;
         public string Funcionality { get; set; } = string.Empty;
-        public Guid ProjectId { get; set; }
-        public Project Project { get; set; }
-
     }
 }

@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Requirements.Hub.Communication\Requirements.Hub.Communication.csproj" />
+    <ProjectReference Include="..\Requirements.Hub.Infrastructure\Requirements.Hub.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

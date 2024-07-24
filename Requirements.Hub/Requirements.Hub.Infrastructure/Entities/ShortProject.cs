@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Requirements.Hub.Infrastructure.Entities
 {
-    public class Project
+    public class ShortProject
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
-        public IList<Requirement> Requirement { get; set; } = new List<Requirement>();
+        public Guid Id { get; set; }
     }
 }

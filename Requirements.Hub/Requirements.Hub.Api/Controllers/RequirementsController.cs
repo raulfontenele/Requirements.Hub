@@ -27,7 +27,7 @@ namespace Requirements.Hub.Api.Controllers
 
         }
         [HttpGet()]
-        public IActionResult GetAllRequirement(string projectName)
+        public IActionResult GetAllRequirement()
         {
             try
             {

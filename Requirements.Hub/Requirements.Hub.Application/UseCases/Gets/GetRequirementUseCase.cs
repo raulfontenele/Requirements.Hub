@@ -37,8 +37,8 @@ namespace Requirements.Hub.Application.UseCases.Gets
                     Id = x.Id, 
                     Description = x.Description, 
                     Funcionality = x.Funcionality,
-                    ProjectName = x.Project.Name,
-                    ProjectId = x.Project.Id
+                    ProjectName = x.Project
+                    //ProjectId = x.Project.Id
                 }).ToList();
             }
         }

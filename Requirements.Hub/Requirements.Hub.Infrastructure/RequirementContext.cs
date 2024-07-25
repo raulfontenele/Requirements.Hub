@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Requirements.Hub.Infrastructure.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,19 @@ namespace Requirements.Hub.Infrastructure
 
             return reqs;
         }
-        public IList<Requirement> GetAllRequirements()
+        public IList<SimpleRequirement> GetAllRequirements()
         {
-            var reqs = Requirement.ToList();
+            return Requirement.Include(p => p.Project).Select(r => 
 
-            return reqs;
+                new SimpleRequirement()
+                {
+                    Id = r.Id,
+                    Description = r.Description,
+                    Funcionality = r.Funcionality,
+                    Project = r.Project.Name
+                }
+
+            ).ToList();
         }
     }
 }

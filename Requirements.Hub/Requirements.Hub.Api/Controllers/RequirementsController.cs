@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Requirements.Hub.Application.UseCases.Delete;
 using Requirements.Hub.Application.UseCases.Gets;
 using Requirements.Hub.Application.UseCases.Update;
 using Requirements.Hub.Communication.Request.Requirement;
@@ -57,6 +58,13 @@ namespace Requirements.Hub.Api.Controllers
                 return BadRequest("Erro Inesperado");
             }
 
+        }
+        [HttpDelete]
+        public IActionResult DeleteAllRequirement()
+        {
+            DeleteRequirementsUseCase deleteRequirementsUseCase = new DeleteRequirementsUseCase();
+            deleteRequirementsUseCase.DeleteAllRequirements();
+            return Ok();
         }
     }
 }

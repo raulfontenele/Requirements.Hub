@@ -2986,19 +2986,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Raul\\.nuget\\packages\\": {}
+    "C:\\Users\\raul.santana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raul\\OneDrive\\Documentos\\1. MAIN\\1. DESENVOLVIMENTO\\1. C#\\Requirements Hub\\Requirements.Hub\\Requirements.Hub.Application\\Requirements.Hub.Application.csproj",
+      "projectUniqueName": "C:\\Users\\raul.santana\\Documents\\1. Main Folder\\1. Eletra Energy Solutions\\2. DESENVOLVIMENTO\\1. C#\\Requirements.Hub\\Requirements.Hub\\Requirements.Hub.Application\\Requirements.Hub.Application.csproj",
       "projectName": "Requirements.Hub.Application",
-      "projectPath": "C:\\Users\\Raul\\OneDrive\\Documentos\\1. MAIN\\1. DESENVOLVIMENTO\\1. C#\\Requirements Hub\\Requirements.Hub\\Requirements.Hub.Application\\Requirements.Hub.Application.csproj",
-      "packagesPath": "C:\\Users\\Raul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Raul\\OneDrive\\Documentos\\1. MAIN\\1. DESENVOLVIMENTO\\1. C#\\Requirements Hub\\Requirements.Hub\\Requirements.Hub.Application\\obj\\",
+      "projectPath": "C:\\Users\\raul.santana\\Documents\\1. Main Folder\\1. Eletra Energy Solutions\\2. DESENVOLVIMENTO\\1. C#\\Requirements.Hub\\Requirements.Hub\\Requirements.Hub.Application\\Requirements.Hub.Application.csproj",
+      "packagesPath": "C:\\Users\\raul.santana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\raul.santana\\Documents\\1. Main Folder\\1. Eletra Energy Solutions\\2. DESENVOLVIMENTO\\1. C#\\Requirements.Hub\\Requirements.Hub\\Requirements.Hub.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Raul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\raul.santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3012,11 +3012,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Raul\\OneDrive\\Documentos\\1. MAIN\\1. DESENVOLVIMENTO\\1. C#\\Requirements Hub\\Requirements.Hub\\Requirements.Hub.Communication\\Requirements.Hub.Communication.csproj": {
-              "projectPath": "C:\\Users\\Raul\\OneDrive\\Documentos\\1. MAIN\\1. DESENVOLVIMENTO\\1. C#\\Requirements Hub\\Requirements.Hub\\Requirements.Hub.Communication\\Requirements.Hub.Communication.csproj"
+            "C:\\Users\\raul.santana\\Documents\\1. Main Folder\\1. Eletra Energy Solutions\\2. DESENVOLVIMENTO\\1. C#\\Requirements.Hub\\Requirements.Hub\\Requirements.Hub.Communication\\Requirements.Hub.Communication.csproj": {
+              "projectPath": "C:\\Users\\raul.santana\\Documents\\1. Main Folder\\1. Eletra Energy Solutions\\2. DESENVOLVIMENTO\\1. C#\\Requirements.Hub\\Requirements.Hub\\Requirements.Hub.Communication\\Requirements.Hub.Communication.csproj"
             },
-            "C:\\Users\\Raul\\OneDrive\\Documentos\\1. MAIN\\1. DESENVOLVIMENTO\\1. C#\\Requirements Hub\\Requirements.Hub\\Requirements.Hub.Infrastructure\\Requirements.Hub.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Raul\\OneDrive\\Documentos\\1. MAIN\\1. DESENVOLVIMENTO\\1. C#\\Requirements Hub\\Requirements.Hub\\Requirements.Hub.Infrastructure\\Requirements.Hub.Infrastructure.csproj"
+            "C:\\Users\\raul.santana\\Documents\\1. Main Folder\\1. Eletra Energy Solutions\\2. DESENVOLVIMENTO\\1. C#\\Requirements.Hub\\Requirements.Hub\\Requirements.Hub.Infrastructure\\Requirements.Hub.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\raul.santana\\Documents\\1. Main Folder\\1. Eletra Energy Solutions\\2. DESENVOLVIMENTO\\1. C#\\Requirements.Hub\\Requirements.Hub\\Requirements.Hub.Infrastructure\\Requirements.Hub.Infrastructure.csproj"
             }
           }
         }
@@ -3046,7 +3046,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

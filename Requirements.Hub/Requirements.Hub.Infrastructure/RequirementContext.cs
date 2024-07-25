@@ -31,5 +31,25 @@ namespace Requirements.Hub.Infrastructure
 
             ).ToList();
         }
+        public IList<Requirement> GetAllFullRequirements()
+        {
+            return Requirement.Include(p => p.Project).Select(r =>
+
+                new Requirement()
+                {
+                    Id = r.Id,
+                    Description = r.Description,
+                    Funcionality = r.Funcionality,
+                    Project = r.Project,
+                    ProjectId = r.ProjectId
+                }
+
+            ).ToList();
+        }
+        public void DeleteRequirement(Requirement requirement)
+        {
+            Requirement.Entry(requirement).State = EntityState.Deleted;
+            SaveChanges();
+        }
     }
 }

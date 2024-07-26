@@ -1,7 +1,9 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using Requirements.Hub.Communication.Response;
 using Requirements.Hub.Communication.Response.Requirement;
+using Requirements.Hub.Exceptions.ExceptionsBase;
 using Requirements.Hub.Infrastructure;
+using Requirements.Hub.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +22,7 @@ namespace Requirements.Hub.Application.UseCases.Gets
                 var requirements = context.GetRequirementsByProjectName(projectName);
 
                 if (requirements.IsNullOrEmpty())
-                    throw new Exception("project not found");
+                    throw new NotFoundException(MappingErrorExceptions.PROJECT_NOT_FOUND_EXCEPTION);
 
                 return requirements.Select(x => new RequirementResponseJSON() { Id = x.Id, Description = x.Description, Funcionality = x.Funcionality }).ToList();
             }

@@ -12,35 +12,21 @@ namespace Requirements.Hub.Api.Controllers
         [HttpPost]
         public IActionResult AddProject([FromBody] BaseProjectRequestJSON request)
         {
-            try
-            {
-                AddProjectUseCase projectsUseCases = new AddProjectUseCase();
+            AddProjectUseCase projectsUseCases = new AddProjectUseCase();
 
                 projectsUseCases.AddShortProject(request);
 
                 return Ok();
-            }
-            catch (Exception)
-            {
-                return BadRequest("Erro Inesperado");
-            }
             
         }
         [HttpGet]
         public IActionResult GetAllProjects()
         {
-            try
-            {
-                GetProjectsUseCases projectsUseCases = new GetProjectsUseCases();
+            GetProjectsUseCases projectsUseCases = new GetProjectsUseCases();
 
-                var projects = projectsUseCases.GetAllShortProjects();
+            var projects = projectsUseCases.GetAllShortProjects();
 
-                return Ok(projects);
-            }
-            catch (Exception)
-            {
-                return BadRequest("Erro Inesperado");
-            }
+            return Ok(projects);
         }
     }
 }

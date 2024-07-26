@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Requirements.Hub.Communication\Requirements.Hub.Communication.csproj" />
+    <ProjectReference Include="..\Requirements.Hub.Exception\Requirements.Hub.Exceptions.csproj" />
     <ProjectReference Include="..\Requirements.Hub.Infrastructure\Requirements.Hub.Infrastructure.csproj" />
   </ItemGroup>
 

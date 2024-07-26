@@ -13,50 +13,25 @@ namespace Requirements.Hub.Api.Controllers
         [HttpGet("ProjectName")]
         public IActionResult GetRequirementByProject(string projectName)
         {
-            try
-            {
-                GetRequirementUseCase requirementUseCase = new GetRequirementUseCase();
-                var reqs = requirementUseCase.GetRequirementByProjectName(projectName);
+            GetRequirementUseCase requirementUseCase = new GetRequirementUseCase();
+            var reqs = requirementUseCase.GetRequirementByProjectName(projectName);
 
-                return Ok(reqs);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro Inesperado");
-            }
-            
-
+            return Ok(reqs);
         }
         [HttpGet()]
         public IActionResult GetAllRequirement()
         {
-            try
-            {
-                GetRequirementUseCase requirementUseCase = new GetRequirementUseCase();
-                var reqs = requirementUseCase.GetAllRequirement();
+            GetRequirementUseCase requirementUseCase = new GetRequirementUseCase();
+            var reqs = requirementUseCase.GetAllRequirement();
 
-                return Ok(reqs);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro Inesperado");
-            }
-
-
+            return Ok(reqs);
         }
         [HttpPut]
         public IActionResult AddRequirementsByProjectName(string projectName, RequirementRequestJSON requirement)
         {
-            try
-            {
-                UpdateProjectUseCase updateProject = new UpdateProjectUseCase();
-                var newProject = updateProject.AddRequirementsByProject(projectName, requirement);
-                return Ok(newProject);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro Inesperado");
-            }
+            UpdateProjectUseCase updateProject = new UpdateProjectUseCase();
+            var newProject = updateProject.AddRequirementsByProject(projectName, requirement);
+            return Ok(newProject);
 
         }
         [HttpDelete]

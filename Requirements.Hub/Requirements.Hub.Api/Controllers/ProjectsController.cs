@@ -14,10 +14,10 @@ namespace Requirements.Hub.Api.Controllers
         {
             AddProjectUseCase projectsUseCases = new AddProjectUseCase();
 
-                projectsUseCases.AddShortProject(request);
+            projectsUseCases.AddShortProject(request);
 
-                return Ok();
-            
+            return Ok();
+
         }
         [HttpGet]
         public IActionResult GetAllProjects()
@@ -27,6 +27,15 @@ namespace Requirements.Hub.Api.Controllers
             var projects = projectsUseCases.GetAllShortProjects();
 
             return Ok(projects);
+        }
+        [HttpGet("ProjectName")]
+        public IActionResult GetAllProjects(string projectName)
+        {
+            GetProjectsUseCases projectsUseCases = new GetProjectsUseCases();
+
+            var project = projectsUseCases.GetProjectByName(projectName);
+
+            return Ok(project);
         }
     }
 }

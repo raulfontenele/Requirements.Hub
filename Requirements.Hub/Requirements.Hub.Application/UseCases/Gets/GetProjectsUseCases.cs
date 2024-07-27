@@ -1,4 +1,6 @@
 ﻿using Requirements.Hub.Communication.Response;
+using Requirements.Hub.Communication.Response.Project;
+using Requirements.Hub.Communication.Response.Requirement;
 using Requirements.Hub.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,24 @@ namespace Requirements.Hub.Application.UseCases.Gets
                 var projects = context.GetAllShortProject();
 
                 return projects.Select(x => new ProjectShortResponseJson() { Id = x.Id, Name = x.Name }).ToList();
+            }
+        }
+        public ProjectLongResponseJson GetProjectByName(string projectName)
+        {
+            using (var context = new ProjectContext())
+            {
+                var project = context.GetProjectByName(projectName);
+
+                return new ProjectLongResponseJson
+                {
+                    Name = project.Name,
+                    Requirements = project.Requirement.Select(x => new RequirementResponseJSON()
+                    {
+                        Description = x.Description,
+                        Funcionality = x.Funcionality,
+                        Id = x.Id,
+                    }).ToList()
+                };
             }
         }
     }

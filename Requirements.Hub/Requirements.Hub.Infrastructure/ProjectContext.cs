@@ -9,15 +9,14 @@ namespace Requirements.Hub.Infrastructure
         {
             return Project.Select(p => new ShortProject { Name = p.Name, Id = p.Id }).ToList();
         }
-
-        public Project GetProjectByName(string projectName)
+        public IList<Project> GetAllFullProjects()
         {
-            var project = Project.Include(r => r.Requirement).FirstOrDefault(p => p.Name == projectName);
+            return Project.Include(r => r.Requirement).ToList();
+        }
 
-            if (project == null)
-                throw new Exception("Project not found");
-
-            return project;
+        public Project? GetProjectByName(string projectName)
+        {
+            return Project.Include(r => r.Requirement).FirstOrDefault(p => p.Name == projectName);
         }
 
         public Project UpdateProject(Project project)
@@ -38,6 +37,11 @@ namespace Requirements.Hub.Infrastructure
         {
             Project.Add(project);
 
+            SaveChanges();
+        }
+        public void DeleteProject(Project project)
+        {
+            Project.Entry(project).State = EntityState.Deleted;
             SaveChanges();
         }
     }

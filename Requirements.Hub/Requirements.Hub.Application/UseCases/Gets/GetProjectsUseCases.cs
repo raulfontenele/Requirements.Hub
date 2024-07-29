@@ -1,6 +1,8 @@
 ﻿using Requirements.Hub.Communication.Response;
 using Requirements.Hub.Communication.Response.Project;
 using Requirements.Hub.Communication.Response.Requirement;
+using Requirements.Hub.Exceptions;
+using Requirements.Hub.Exceptions.ExceptionsBase;
 using Requirements.Hub.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -26,6 +28,9 @@ namespace Requirements.Hub.Application.UseCases.Gets
             using (var context = new ProjectContext())
             {
                 var project = context.GetProjectByName(projectName);
+
+                if (project == null)
+                    throw new NotFoundException(MappingErrorExceptions.PROJECT_NOT_FOUND_EXCEPTION);
 
                 return new ProjectLongResponseJson
                 {

@@ -18,6 +18,14 @@ namespace Requirements.Hub.Api.Controllers
 
             return Ok(reqs);
         }
+        [HttpGet("ProjectNameAndFuncionality")]
+        public IActionResult GetRequirementByProjectAndFuncionality(string projectName, string funcionality)
+        {
+            GetRequirementUseCase requirementUseCase = new GetRequirementUseCase();
+            var reqs = requirementUseCase.GetRequirementByProjectNameAndFuncionality(projectName, funcionality);
+
+            return Ok(reqs);
+        }
         [HttpGet()]
         public IActionResult GetAllRequirement()
         {

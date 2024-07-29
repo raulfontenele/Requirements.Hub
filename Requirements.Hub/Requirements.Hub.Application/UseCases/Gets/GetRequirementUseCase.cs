@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Requirements.Hub.Infrastructure.Entities;
 
 namespace Requirements.Hub.Application.UseCases.Gets
 {
@@ -26,6 +27,17 @@ namespace Requirements.Hub.Application.UseCases.Gets
 
                 return requirements.Select(x => new RequirementResponseJSON() { Id = x.Id, Description = x.Description, Funcionality = x.Funcionality }).ToList();
             }
+        }
+        public IList<RequirementResponseJSON> GetRequirementByProjectNameAndFuncionality(string projectName, string funcionality)
+        {
+            var requirementsByProject = GetRequirementByProjectName(projectName);
+
+            var filterRequirements = requirementsByProject.Where(req => req.Funcionality == funcionality).ToList();
+
+            if (filterRequirements.IsNullOrEmpty())
+                throw new NotFoundException(MappingErrorExceptions.FUNCIONALITY_NOT_FOUND_EXCEPTION);
+
+            return filterRequirements;
         }
         public IList<RequirementLongResponseJSON> GetAllRequirement()
         {

@@ -61,6 +61,24 @@ namespace Requirements.Hub.Exceptions {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Funcionality not found.
+        /// </summary>
+        public static string FUNCIONALITY_NOT_FOUND_EXCEPTION {
+            get {
+                return ResourceManager.GetString("FUNCIONALITY_NOT_FOUND_EXCEPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Project already exists.
+        /// </summary>
+        public static string PROJECT_ALREADY_EXISTS {
+            get {
+                return ResourceManager.GetString("PROJECT_ALREADY_EXISTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Project not found.
         /// </summary>
         public static string PROJECT_NOT_FOUND_EXCEPTION {

@@ -15,7 +15,7 @@ namespace Requirements.Hub.Exceptions.ExceptionsBase
 
         public override HttpStatusCode GetStatusCode()
         {
-            return HttpStatusCode.BadRequest;
+            return HttpStatusCode.NotFound;
         }
     }
 }

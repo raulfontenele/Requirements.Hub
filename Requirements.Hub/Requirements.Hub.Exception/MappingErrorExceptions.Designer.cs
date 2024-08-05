@@ -86,5 +86,14 @@ namespace Requirements.Hub.Exceptions {
                 return ResourceManager.GetString("PROJECT_NOT_FOUND_EXCEPTION", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Requirement not found.
+        /// </summary>
+        public static string REQUIREMENT_NOT_FOUND_EXCETION {
+            get {
+                return ResourceManager.GetString("REQUIREMENT_NOT_FOUND_EXCETION", resourceCulture);
+            }
+        }
     }
 }

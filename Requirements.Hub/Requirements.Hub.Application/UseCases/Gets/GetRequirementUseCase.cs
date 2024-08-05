@@ -25,7 +25,12 @@ namespace Requirements.Hub.Application.UseCases.Gets
                 if (requirements.IsNullOrEmpty())
                     throw new NotFoundException(MappingErrorExceptions.PROJECT_NOT_FOUND_EXCEPTION);
 
-                return requirements.Select(x => new RequirementResponseJSON() { Id = x.Id, Description = x.Description, Funcionality = x.Funcionality }).ToList();
+                return requirements.Select(x => new RequirementResponseJSON() { 
+                    Id = x.Id, 
+                    Description = x.Description, 
+                    Funcionality = x.Funcionality,
+                    Priority = x.Priority.ToString()}
+                ).ToList();
             }
         }
         public IList<RequirementResponseJSON> GetRequirementByProjectNameAndFuncionality(string projectName, string funcionality)
@@ -51,8 +56,8 @@ namespace Requirements.Hub.Application.UseCases.Gets
                     Id = x.Id, 
                     Description = x.Description, 
                     Funcionality = x.Funcionality,
-                    ProjectName = x.Project
-                    //ProjectId = x.Project.Id
+                    ProjectName = x.Project,
+                    Priority = x.Priority.ToString(),
                 }).ToList();
             }
         }

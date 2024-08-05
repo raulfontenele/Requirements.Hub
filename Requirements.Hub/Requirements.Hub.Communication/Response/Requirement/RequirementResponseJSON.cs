@@ -11,5 +11,6 @@ namespace Requirements.Hub.Communication.Response.Requirement
         public Guid Id { get; set; }
         public string Description { get; set; } = string.Empty;
         public string Funcionality { get; set; } = string.Empty;
+        public string Priority { get; set; } = string.Empty;
     }
 }

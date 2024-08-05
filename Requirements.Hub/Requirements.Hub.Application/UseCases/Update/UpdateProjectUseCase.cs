@@ -2,6 +2,8 @@
 using Requirements.Hub.Communication.Response;
 using Requirements.Hub.Communication.Response.Project;
 using Requirements.Hub.Communication.Response.Requirement;
+using Requirements.Hub.Exceptions;
+using Requirements.Hub.Exceptions.ExceptionsBase;
 using Requirements.Hub.Infrastructure;
 using Requirements.Hub.Infrastructure.Entities;
 using System;
@@ -14,18 +16,19 @@ namespace Requirements.Hub.Application.UseCases.Update
 {
     public class UpdateProjectUseCase
     {
-        public ProjectLongResponseJson AddRequirementsByProject(string projectName, RequirementRequestJSON requirement)
+        public ProjectLongResponseJson AddRequirementsByProject(string projectName, AddRequirementRequestJSON requirement)
         {
             using (var context = new ProjectContext())
             {
-                var project = context.GetProjectByName(projectName);
+                var project = context.GetProjectByName(projectName) ?? throw new NotFoundException(MappingErrorExceptions.PROJECT_NOT_FOUND_EXCEPTION);
 
                 project.Requirement.Add(
                     new Requirement()
                     {
                         Description = requirement.Description,
                         Funcionality = requirement.Funcionality,
-                        Project = project
+                        Project = project,
+                        Priority = (RequirementPriority)requirement.Priority,
                     }
                 );
 
@@ -39,6 +42,7 @@ namespace Requirements.Hub.Application.UseCases.Update
                         Funcionality = x.Funcionality,
                         Description = requirement.Description,
                         Id = x.Id,
+                        Priority = requirement.Priority.ToString(),
                     }).ToList()
                 };
 

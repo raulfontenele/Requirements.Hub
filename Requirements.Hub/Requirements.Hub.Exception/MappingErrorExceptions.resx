@@ -126,4 +126,7 @@
   <data name="PROJECT_NOT_FOUND_EXCEPTION" xml:space="preserve">
     <value>Project not found</value>
   </data>
+  <data name="REQUIREMENT_NOT_FOUND_EXCETION" xml:space="preserve">
+    <value>Requirement not found</value>
+  </data>
 </root>

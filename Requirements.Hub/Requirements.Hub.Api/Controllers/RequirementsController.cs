@@ -34,13 +34,20 @@ namespace Requirements.Hub.Api.Controllers
 
             return Ok(reqs);
         }
-        [HttpPut]
-        public IActionResult AddRequirementsByProjectName(string projectName, RequirementRequestJSON requirement)
+        [HttpPut("Add_New_Requirement")]
+        public IActionResult AddRequirementsByProjectName(string projectName, AddRequirementRequestJSON requirement)
         {
             UpdateProjectUseCase updateProject = new UpdateProjectUseCase();
             var newProject = updateProject.AddRequirementsByProject(projectName, requirement);
             return Ok(newProject);
 
+        }
+        [HttpPut("Update_Requirement")]
+        public IActionResult UpdateRequirementByid(Guid id, UpdateRequirementRequestJSON requirement)
+        {
+            UpdateRequirementsUseCase updateRequirement = new UpdateRequirementsUseCase();
+            var newRequirement = updateRequirement.UpdateRequirementById(id, requirement);
+            return Ok(newRequirement);
         }
         [HttpDelete]
         public IActionResult DeleteAllRequirement()

@@ -13,6 +13,8 @@ namespace Requirements.Hub.Infrastructure.Entities
         public string Funcionality { get; set; } = string.Empty;
         public Guid ProjectId { get; set; }
         public Project Project { get; set; }
+        public RequirementPriority Priority { get; set; }
+
 
     }
 }

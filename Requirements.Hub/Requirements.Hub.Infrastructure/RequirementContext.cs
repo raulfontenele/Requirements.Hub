@@ -11,6 +11,20 @@ namespace Requirements.Hub.Infrastructure
 {
     public class RequirementContext : RequirementsHubDbContext
     {
+        public Requirement? GetRequirementByID(Guid id)
+        {
+            return Requirement.Include(p => p.Project).FirstOrDefault(r => r.Id == id);
+        }
+        public Requirement UpdateRequirement(Requirement requirement)
+        {
+            var req = Requirement.FirstOrDefault(r => r.Id == requirement.Id);
+
+            req = requirement;
+
+            SaveChanges();
+
+            return requirement;
+        }
         public IList<Requirement> GetRequirementsByProjectName(string projectName)
         {
             var reqs = Requirement.Where(r => r.Project.Name ==  projectName).ToList();
@@ -26,7 +40,8 @@ namespace Requirements.Hub.Infrastructure
                     Id = r.Id,
                     Description = r.Description,
                     Funcionality = r.Funcionality,
-                    Project = r.Project.Name
+                    Project = r.Project.Name,
+                    Priority = r.Priority,
                 }
 
             ).ToList();
